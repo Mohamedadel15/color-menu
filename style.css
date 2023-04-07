@@ -12,8 +12,6 @@ nav {
   width: 100%;
   height: 9vh;
   background-color: #0b5394;
-;
-
 }
 
 nav ul li {
@@ -34,12 +32,12 @@ nav ul li h1:hover {
   transform: scale(1, 1.5);
 }
 section {
-  height: 85vh;
+  min-height: calc(100vh - 9vh - 6vh);
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
   flex-wrap: wrap;
+  padding: 10px;
 }
 .card {
   margin: 10px;
@@ -80,3 +78,38 @@ footer button {
   font-size: 20px;
   margin-bottom: 20px;
 }
+
+
+
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+  nav{
+    height: 4vh;
+  }
+  nav ul li h1 {
+    font-size: 25px;
+    margin: 0 1em;
+  }
+
+  .card {
+    height: 200px;
+    width: 10em;
+  }
+
+  section {
+    padding: 0;
+    min-height: calc(100vh - 9vh - 6vh - 20px);
+  }
+
+  .color {
+    height: 160px;
+  }
+  footer button {
+    margin-top: 20px;
+  
+  }
+}
+
+
